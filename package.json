@@ -1,0 +1,22 @@
+{
+  "name": "website_optimization_zh",
+  "version": "0.1.0",
+  "description": "你要做的是尽可能优化这个在线项目的速度。注意，请应用你之前在[网站性能优化课程](https://cn.udacity.com/course/website-performance-optimization--ud884/)中学习的技术来优化关键渲染路径并使这个页面尽可能快的渲染。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "minify": "ncp src dist && npm run minifyHtml && npm run cleanCss && npm run uglifyJs",
+    "minifyHtml": "html-minifier --collapse-whitespace --remove-comments --minify-css true --minify-js true src/index.html >dist/index.html",
+    "cleanCss": "cleancss -o dist/css/style.css src/css/style.css && cleancss -o dist/css/print.css src/css/print.css && cleancss -o dist/css/smartphones.css src/css/smartphones.css",
+    "uglifyJs": "uglifyjs src/js/perfmatters.js >dist/js/perfmatters.js"
+  },
+  "author": "Milanda",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "clean-css-cli": "^4.1.10",
+    "html-minifier": "^3.5.5",
+    "ncp": "^2.0.0",
+    "uglify-js": "^3.1.4"
+  }
+}
