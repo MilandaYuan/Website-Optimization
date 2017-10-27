@@ -5,16 +5,26 @@
 #### 运行步骤
 
 1. 运行一个本地服务器nginx
+
    具体做法：
    step1、下载nginx
+
    step2、把下载的nginx.conf替换为代码库中的该文件
+
    step3、将nginx.conf中http的root修改为本地代码库中dist目录所在的绝对路径
+
    step4、双击nginx.exe以启动程序
+
 2. 给本地服务器一个公网地址，使其能够被远程访问
+
    具体做法：
+
    step1、下载ngrok
+
    step2、进入ngrok所下载的目录，执行命令：./ngrok http 8080
+
    step3、复制返回的公网地址到pagespeed，测试分数
+
 #### 优化概述
 1. 在nginx服务器启用了gzip压缩功能
 2. 在nginx服务器设置了图片、js、css缓存功能
