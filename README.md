@@ -21,12 +21,15 @@
 2. 在nginx服务器设置了图片、js、css缓存功能
 3. 缩小了图片pizzeria.jpg的大小
 4. 使用html-minify、clean-css-cli、uglify-js分别压缩html、css、js文件
-5. 使用@font-face把web字体调整到style.css里
+5. 使用@font-face把web字体调整到css里
 6. 在两个link标签里，使用了媒体查询
 7. 在引用谷歌分析的script标签里，添加了asyc属性
+8. 将style.css内嵌到html里
 
 
 ### Part 2: 优化 pizza.html 的 FPS（每秒帧数）
 
 1. 简化了遍历披萨元素并改变宽度的过程
 2. 将造成强制同步布局的代码移除循环体
+3. 使用getElementsByClassName 替换了更耗性能的 querySelectorAll
+4. 根据窗口高度重新计算了需要的滑窗披萨的个数
